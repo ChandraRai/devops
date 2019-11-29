@@ -25,4 +25,8 @@ def index():
     return render_template('index.html', url=url)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    try:
+        port = int(sys.argv[1]) # This is for a command-line input
+    except:
+        port = 8080 # If you don't provide any port the port will be set to 12345    
+    app.run(port=port, host="0.0.0.0")
