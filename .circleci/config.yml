@@ -54,6 +54,6 @@ jobs:
       
       - checkout
 
-      - run: python app.py
+      - run: app.py
 
       - run: ssh -p 64625 ubuntu@54.221.135.43 -L 8080:localhost:8080
